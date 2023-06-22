@@ -1,1 +1,12 @@
-<p>listado-noticias works!</p>
+<div class="row row-cols-1 row-cols-md-2 g-4 mt-4 mb-4">
+    <div class="col" *ngFor="let noticia of listadoDeNoticias">
+        <div class="card border-info" style="max-width: 50rem;">
+            <div class="card-body">
+                <small>{{noticia.author}}</small>
+                <h5 class="card-title">{{noticia.title}}</h5>
+                <p class="card-text">{{noticia.publishedAt}}</p>
+            </div>
+            <a [href]="noticia.url" class="btn btn-primary btn-block" target="_blank">+ información</a>
+        </div>       
+    </div>
+</div>
